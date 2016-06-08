@@ -1,5 +1,20 @@
-version: 0.1
+version: 0.0
 os: linux
 files:
   - source: phpinfo.php
-    destination: /var/www/topgolf/
+    destination: /var/www/topgolf
+permissions:
+   - object: /opt/codedeploy-agent/deployment-root
+     pattern: "**"
+     owner: root
+     group: root
+     mode: 755
+     type:
+       - directory
+   - object: /var/www/topgolf
+     pattern: "**"
+     owner: root
+     group: root
+     mode: 755
+     type:
+       - directory
