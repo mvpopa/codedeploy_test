@@ -5,6 +5,7 @@ files:
     destination: /var/www/topgolf
 permissions:
    - object: /opt/codedeploy-agent/deployment-root
+     overwrite: true
      pattern: "**"
      owner: root
      group: root
@@ -12,6 +13,7 @@ permissions:
      type:
        - directory
    - object: /var/www/topgolf
+     overwrite: true
      pattern: "**"
      owner: root
      group: root
