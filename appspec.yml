@@ -3,9 +3,9 @@ os: linux
 files:
   - source: phpinfo.php
     destination: /var/www/topgolf
+    overwrite: true
 permissions:
    - object: /opt/codedeploy-agent/deployment-root
-     overwrite: true
      pattern: "**"
      owner: root
      group: root
@@ -13,7 +13,6 @@ permissions:
      type:
        - directory
    - object: /var/www/topgolf
-     overwrite: true
      pattern: "**"
      owner: root
      group: root
