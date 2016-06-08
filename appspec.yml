@@ -19,3 +19,8 @@ permissions:
      mode: 755
      type:
        - directory
+hooks:
+    BeforeInstall:
+        - location: scripts/beforeInstall.sh
+    AfterInstall:
+        - location: scripts/afterInstall.sh
